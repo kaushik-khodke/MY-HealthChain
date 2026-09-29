@@ -594,7 +594,7 @@ export function Analysis() {
                         {/* Hospital Official Header & Executive Summary Card */}
                         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-0 pointer-events-none" />
-                            
+
                             {/* Header Title Row */}
                             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-slate-100 dark:border-slate-800 relative z-10">
                                 <div className="flex items-center gap-4">
@@ -616,16 +616,6 @@ export function Analysis() {
                                         <p className="text-xs text-muted-foreground">
                                             Comprehensive Multi-System Clinical Decision Support & Patient Executive Summary
                                         </p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-center gap-3">
-                                    <div className="bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-2 rounded-2xl flex items-center gap-2">
-                                        <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                                        <div className="text-left">
-                                            <div className="text-[9px] uppercase font-bold text-emerald-600 dark:text-emerald-400">Clinical Accuracy</div>
-                                            <div className="text-xs font-black text-emerald-600 dark:text-emerald-400">{execSummary.estimated_accuracy || '98.4%'} Verified</div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -661,7 +651,7 @@ export function Analysis() {
                                 {/* Score Radial Gauge Column */}
                                 <div className="lg:col-span-4 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-3xl border border-slate-200/60 dark:border-slate-800 flex flex-col justify-between items-center text-center">
                                     <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Overall Executive Health Score</div>
-                                    
+
                                     <div className="relative w-40 h-40 flex items-center justify-center my-3">
                                         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                                             <path
@@ -793,30 +783,28 @@ export function Analysis() {
                         </Card>
 
                         {/* Hybrid Quantum Machine Learning (QML) Disease Prediction Section (SIH 26139) */}
-                        <div className="relative overflow-hidden rounded-3xl border-2 border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 via-slate-900/90 to-purple-950/40 p-6 sm:p-8 shadow-2xl backdrop-blur-xl">
-                            {/* Ambient Quantum Energy Glows */}
-                            <div className="absolute top-0 right-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl -z-0 pointer-events-none" />
-                            <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl -z-0 pointer-events-none" />
+                        <div className="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-xl">
+                            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-0 pointer-events-none" />
 
                             {/* QML Section Header */}
-                            <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-6 border-b border-indigo-500/20">
+                            <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500/20 via-indigo-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-lg shadow-cyan-500/10 shrink-0">
-                                        <Atom className={`w-8 h-8 text-cyan-400 ${qmlLoading ? 'animate-spin' : ''}`} style={{ animationDuration: '8s' }} />
+                                    <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shadow-inner shrink-0">
+                                        <Atom className={`w-8 h-8 text-primary ${qmlLoading ? 'animate-spin' : ''}`} style={{ animationDuration: '8s' }} />
                                     </div>
                                     <div>
                                         <div className="flex flex-wrap items-center gap-2 mb-1">
-                                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-primary/10 text-primary border border-primary/20">
                                                 SIH Problem Statement 26139
                                             </span>
-                                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-300 border border-indigo-500/30">
+                                            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-500/20">
                                                 Hybrid Quantum-Classical VQC
                                             </span>
                                         </div>
-                                        <h2 className="text-2xl font-black font-heading tracking-tight text-white flex items-center gap-2">
+                                        <h2 className="text-2xl font-black font-heading tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
                                             Hybrid QML Disease Prediction Engine
                                         </h2>
-                                        <p className="text-xs text-slate-300">
+                                        <p className="text-xs text-muted-foreground">
                                             Early Cardiovascular Risk Detection via 6-Qubit Parameterized Variational Quantum Circuits & Classical Preprocessing
                                         </p>
                                     </div>
@@ -824,40 +812,40 @@ export function Analysis() {
 
                                 {/* Circuit Telemetry Summary Chips */}
                                 <div className="flex flex-wrap items-center gap-2">
-                                    <div className="bg-slate-900/80 border border-cyan-500/30 px-3 py-1.5 rounded-xl text-center">
-                                        <div className="text-[9px] uppercase font-bold text-cyan-400">Qubits</div>
-                                        <div className="text-xs font-black text-white font-mono">{qmlData?.circuit_telemetry?.qubit_count || 6} Wires</div>
+                                    <div className="bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-xl text-center">
+                                        <div className="text-[9px] uppercase font-bold text-muted-foreground">Qubits</div>
+                                        <div className="text-xs font-black font-mono">{qmlData?.circuit_telemetry?.qubit_count || 6} Wires</div>
                                     </div>
-                                    <div className="bg-slate-900/80 border border-indigo-500/30 px-3 py-1.5 rounded-xl text-center">
-                                        <div className="text-[9px] uppercase font-bold text-indigo-300">Depth</div>
-                                        <div className="text-xs font-black text-white font-mono">{qmlData?.circuit_telemetry?.circuit_depth || 12} Gates</div>
+                                    <div className="bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-xl text-center">
+                                        <div className="text-[9px] uppercase font-bold text-muted-foreground">Depth</div>
+                                        <div className="text-xs font-black font-mono">{qmlData?.circuit_telemetry?.circuit_depth || 12} Gates</div>
                                     </div>
-                                    <div className="bg-slate-900/80 border border-purple-500/30 px-3 py-1.5 rounded-xl text-center">
-                                        <div className="text-[9px] uppercase font-bold text-purple-300">Entanglement</div>
-                                        <div className="text-xs font-black text-white font-mono">{qmlData?.circuit_telemetry?.entanglement_gates || 12} CNOTs</div>
+                                    <div className="bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-xl text-center">
+                                        <div className="text-[9px] uppercase font-bold text-muted-foreground">Entanglement</div>
+                                        <div className="text-xs font-black font-mono">{qmlData?.circuit_telemetry?.entanglement_gates || 12} CNOTs</div>
                                     </div>
-                                    <div className="bg-slate-900/80 border border-emerald-500/30 px-3 py-1.5 rounded-xl text-center">
-                                        <div className="text-[9px] uppercase font-bold text-emerald-400">Backend</div>
-                                        <div className="text-xs font-black text-white font-mono">Simulator (PennyLane)</div>
+                                    <div className="bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 px-3 py-1.5 rounded-xl text-center">
+                                        <div className="text-[9px] uppercase font-bold text-muted-foreground">Backend</div>
+                                        <div className="text-xs font-black font-mono">Simulator (PennyLane)</div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Clinical Grounding & Quantum Execution Bar */}
-                            <div className="relative z-10 py-3.5 border-b border-indigo-500/15 flex flex-wrap items-center justify-between gap-3">
+                            <div className="relative z-10 py-3.5 border-b border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
                                 <div className="flex flex-wrap items-center gap-2">
-                                    <span className="text-xs font-bold text-slate-300 flex items-center gap-1.5 mr-1">
-                                        <Database className="w-3.5 h-3.5 text-cyan-400" />
+                                    <span className="text-xs font-bold text-muted-foreground flex items-center gap-1.5 mr-1">
+                                        <Database className="w-3.5 h-3.5 text-primary" />
                                         Patient Grounding:
                                     </span>
-                                    <span className="px-3 py-1 rounded-xl text-xs font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                                    <span className="px-3 py-1 rounded-xl text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
                                         {execSummary.records_analyzed || 17} Medical Records Scanned
                                     </span>
-                                    <span className="px-3 py-1 rounded-xl text-xs font-semibold bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                                    <span className="px-3 py-1 rounded-xl text-xs font-semibold bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 border border-indigo-500/20">
                                         Smart Health Card Synced
                                     </span>
-                                    <span className="px-3 py-1 rounded-xl text-xs font-mono font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/20 flex items-center gap-1">
-                                        <Cpu className="w-3 h-3 text-purple-400" />
+                                    <span className="px-3 py-1 rounded-xl text-xs font-mono font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 flex items-center gap-1">
+                                        <Cpu className="w-3 h-3 text-primary" />
                                         VQC (Parameterized Circuit)
                                     </span>
                                 </div>
@@ -866,7 +854,7 @@ export function Analysis() {
                                     size="sm"
                                     onClick={() => runQmlAnalysis()}
                                     disabled={qmlLoading}
-                                    className="bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-cyan-600/20 flex items-center gap-1.5"
+                                    className="bg-primary hover:bg-primary/90 text-white font-bold text-xs rounded-xl shadow-lg shadow-primary/20 flex items-center gap-1.5"
                                 >
                                     {qmlLoading ? (
                                         <>
@@ -875,7 +863,7 @@ export function Analysis() {
                                         </>
                                     ) : (
                                         <>
-                                            <Zap className="w-3.5 h-3.5 text-cyan-200" />
+                                            <Zap className="w-3.5 h-3.5 text-white" />
                                             Re-Execute Quantum Circuit
                                         </>
                                     )}
@@ -901,70 +889,70 @@ export function Analysis() {
 
                                 {/* Egreen Quanta 4-Stage Architecture Pipeline Telemetry Grid (SIH 26139) */}
                                 {qmlData && !qmlData.insufficient_data && (
-                                    <div className="bg-slate-950/70 border border-indigo-500/25 rounded-3xl p-5 shadow-2xl backdrop-blur-md">
-                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-indigo-500/20">
+                                    <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-3xl p-5 shadow-sm">
+                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-200 dark:border-slate-700">
                                             <div className="flex items-center gap-2">
-                                                <Layers className="w-4 h-4 text-cyan-400" />
-                                                <h3 className="text-xs font-black uppercase tracking-wider text-white">
+                                                <Layers className="w-4 h-4 text-primary" />
+                                                <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
                                                     Egreen Quanta 4-Stage QML Pipeline Telemetry
                                                 </h3>
-                                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+                                                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
                                                     SIH 26139 Validated
                                                 </span>
                                             </div>
-                                            <span className="text-[10px] font-mono text-slate-400 flex items-center gap-1.5">
-                                                <Clock className="w-3 h-3 text-cyan-400" />
+                                            <span className="text-[10px] font-mono text-muted-foreground flex items-center gap-1.5">
+                                                <Clock className="w-3 h-3 text-primary" />
                                                 Total Latency SLA: &lt; 10 ms ({qmlData.ensemble_fusion?.total_latency_ms || 5.2} ms measured)
                                             </span>
                                         </div>
 
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
                                             {/* Stage 1: QBHO Biomarker Selection */}
-                                            <div className="bg-slate-900/90 border border-cyan-500/30 p-3.5 rounded-2xl flex flex-col justify-between hover:border-cyan-400 transition-all">
+                                            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-2xl flex flex-col justify-between hover:border-primary/30 hover:shadow-sm transition-all">
                                                 <div>
                                                     <div className="flex justify-between items-center mb-1.5">
-                                                        <span className="text-[9px] font-black uppercase tracking-widest text-cyan-400 flex items-center gap-1">
-                                                            <Target className="w-3 h-3 text-cyan-400" />
+                                                        <span className="text-[9px] font-black uppercase tracking-widest text-primary flex items-center gap-1">
+                                                            <Target className="w-3 h-3 text-primary" />
                                                             Stage 1 • Optimization
                                                         </span>
-                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300">
+                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-primary/10 text-primary">
                                                             {qmlData.qbho_selection?.output_qubit_count || 6} Qubits
                                                         </span>
                                                     </div>
-                                                    <div className="font-bold text-xs text-white mb-1">
+                                                    <div className="font-bold text-xs text-slate-900 dark:text-white mb-1">
                                                         QBHO Biomarker Selection
                                                     </div>
-                                                    <p className="text-[11px] text-slate-300 leading-snug">
+                                                    <p className="text-[11px] text-muted-foreground leading-snug">
                                                         Quantum Black Hole Optimizer absorbed {qmlData.qbho_selection?.absorbed_redundant_variables || 0} noisy/collinear features from raw EHR.
                                                     </p>
                                                 </div>
-                                                <div className="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] text-slate-400 space-y-0.5 font-mono">
+                                                <div className="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-800 text-[10px] text-muted-foreground space-y-0.5 font-mono">
                                                     <div>Event Horizon R: {qmlData.qbho_selection?.event_horizon_radius || 0.067}</div>
                                                     <div>Hawking Absorptions: {qmlData.qbho_selection?.total_hawking_absorptions || 59}</div>
                                                 </div>
                                             </div>
 
                                             {/* Stage 2: Barren Plateau Mitigation */}
-                                            <div className="bg-slate-900/90 border border-indigo-500/30 p-3.5 rounded-2xl flex flex-col justify-between hover:border-indigo-400 transition-all">
+                                            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-2xl flex flex-col justify-between hover:border-indigo-400/30 hover:shadow-sm transition-all">
                                                 <div>
                                                     <div className="flex justify-between items-center mb-1.5">
-                                                        <span className="text-[9px] font-black uppercase tracking-widest text-indigo-400 flex items-center gap-1">
-                                                            <Zap className="w-3 h-3 text-indigo-400" />
+                                                        <span className="text-[9px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
+                                                            <Zap className="w-3 h-3" />
                                                             Stage 2 • Training
                                                         </span>
-                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300">
+                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-700 dark:text-indigo-300">
                                                             3.5× Faster
                                                         </span>
                                                     </div>
-                                                    <div className="font-bold text-xs text-white mb-1">
+                                                    <div className="font-bold text-xs text-slate-900 dark:text-white mb-1">
                                                         Barren Plateau Mitigation
                                                     </div>
-                                                    <p className="text-[11px] text-slate-300 leading-snug">
+                                                    <p className="text-[11px] text-muted-foreground leading-snug">
                                                         Global metaheuristic search across [-π, π]³⁶ hypercube discovering optimal circuit rotation angles.
                                                     </p>
                                                 </div>
-                                                <div className="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] text-slate-400 space-y-0.5 font-mono">
-                                                    <div className="text-emerald-400 flex items-center gap-1">
+                                                <div className="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-800 text-[10px] text-muted-foreground space-y-0.5 font-mono">
+                                                    <div className="text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
                                                         <CheckCircle className="w-2.5 h-2.5" /> Barren Plateau Escaped
                                                     </div>
                                                     <div>Params: 36 angles | Circular CNOT</div>
@@ -972,43 +960,43 @@ export function Analysis() {
                                             </div>
 
                                             {/* Stage 3: Dual Quantum Inference */}
-                                            <div className="bg-slate-900/90 border border-purple-500/30 p-3.5 rounded-2xl flex flex-col justify-between hover:border-purple-400 transition-all">
+                                            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-2xl flex flex-col justify-between hover:border-purple-400/30 hover:shadow-sm transition-all">
                                                 <div>
                                                     <div className="flex justify-between items-center mb-1.5">
-                                                        <span className="text-[9px] font-black uppercase tracking-widest text-purple-400 flex items-center gap-1">
-                                                            <Cpu className="w-3 h-3 text-purple-400" />
+                                                        <span className="text-[9px] font-black uppercase tracking-widest text-purple-600 dark:text-purple-400 flex items-center gap-1">
+                                                            <Cpu className="w-3 h-3" />
                                                             Stage 3 • Inference
                                                         </span>
-                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300">
+                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-700 dark:text-purple-300">
                                                             Dual Quantum
                                                         </span>
                                                     </div>
-                                                    <div className="font-bold text-xs text-white mb-1">
+                                                    <div className="font-bold text-xs text-slate-900 dark:text-white mb-1">
                                                         VQC + QSVM Kernel
                                                     </div>
-                                                    <p className="text-[11px] text-slate-300 leading-snug">
+                                                    <p className="text-[11px] text-muted-foreground leading-snug">
                                                         Model A (VQC Continuous ⟨Z₀⟩) + Model B (QSVM State Fidelity Kernel in 64-dim Hilbert space).
                                                     </p>
                                                 </div>
-                                                <div className="mt-2.5 pt-2 border-t border-slate-800/80 text-[10px] text-slate-400 space-y-0.5 font-mono">
+                                                <div className="mt-2.5 pt-2 border-t border-slate-100 dark:border-slate-800 text-[10px] text-muted-foreground space-y-0.5 font-mono">
                                                     <div>VQC: {((qmlData.ensemble_fusion?.component_probabilities?.vqc_probability || 0.34) * 100).toFixed(1)}% | QSVM: {((qmlData.ensemble_fusion?.component_probabilities?.qsvm_probability || 0.41) * 100).toFixed(1)}%</div>
                                                     <div>Hilbert Margin: {qmlData.qsvm_prediction?.decision_margin?.toFixed(3) || '-0.167'}</div>
                                                 </div>
                                             </div>
 
                                             {/* Stage 4: Hybrid Stacking Meta-Learner */}
-                                            <div className="bg-slate-900/90 border border-emerald-500/30 p-3.5 rounded-2xl flex flex-col justify-between hover:border-emerald-400 transition-all">
+                                            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-3.5 rounded-2xl flex flex-col justify-between hover:border-emerald-400/30 hover:shadow-sm transition-all">
                                                 <div>
                                                     <div className="flex justify-between items-center mb-1.5">
-                                                        <span className="text-[9px] font-black uppercase tracking-widest text-emerald-400 flex items-center gap-1">
-                                                            <Sparkles className="w-3 h-3 text-emerald-400" />
+                                                        <span className="text-[9px] font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                                                            <Sparkles className="w-3 h-3" />
                                                             Stage 4 • Fusion
                                                         </span>
-                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">
+                                                        <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">
                                                             Stacking Apex
                                                         </span>
                                                     </div>
-                                                    <div className="font-bold text-xs text-white mb-1">
+                                                    <div className="font-bold text-xs text-slate-900 dark:text-white mb-1">
                                                         Hybrid Stacking Ensemble
                                                     </div>
                                                     <p className="text-[11px] text-slate-300 leading-snug">
@@ -1028,23 +1016,23 @@ export function Analysis() {
                                 {qmlData && !qmlData.insufficient_data && (
                                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                                         {/* Left Column: QML Prediction Card & Quantum Telemetry */}
-                                        <div className="lg:col-span-5 bg-slate-900/80 border border-indigo-500/30 rounded-3xl p-6 flex flex-col justify-between shadow-xl">
+                                        <div className="lg:col-span-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 flex flex-col justify-between shadow-xl">
                                             <div>
                                                 <div className="flex justify-between items-start mb-4">
                                                     <div>
-                                                        <span className="text-[10px] font-black uppercase tracking-widest text-cyan-400">
+                                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary">
                                                             Target Pathology Assessment
                                                         </span>
-                                                        <h3 className="text-lg font-black text-white mt-0.5">
+                                                        <h3 className="text-lg font-black text-slate-900 dark:text-white mt-0.5">
                                                             Cardiovascular Disease Risk
                                                         </h3>
                                                     </div>
                                                     <span className={`text-xs font-black uppercase px-3 py-1 rounded-full border ${
                                                         qmlData.prediction?.risk_level === 'HIGH'
-                                                            ? 'bg-rose-500/20 text-rose-300 border-rose-500/40'
+                                                            ? 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/30'
                                                             : qmlData.prediction?.risk_level === 'MODERATE'
-                                                            ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
-                                                            : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+                                                            ? 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/30'
+                                                            : 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/30'
                                                     }`}>
                                                         {qmlData.prediction?.risk_level || 'LOW'} RISK
                                                     </span>
@@ -1052,15 +1040,15 @@ export function Analysis() {
 
                                                 {/* Probability Gauge */}
                                                 <div className="my-5 text-center">
-                                                    <div className="text-5xl font-black font-mono tracking-tight text-white">
+                                                    <div className="text-5xl font-black font-mono tracking-tight text-slate-900 dark:text-white">
                                                         {qmlData.prediction?.probability ? (qmlData.prediction.probability * 100).toFixed(1) : '18.5'}%
                                                     </div>
-                                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-bold mt-1">
+                                                    <div className="text-xs text-muted-foreground uppercase tracking-wider font-bold mt-1">
                                                         Calibrated Hybrid Quantum Probability
                                                     </div>
                                                     
                                                     {/* Gradient bar */}
-                                                    <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden mt-3 p-0.5 border border-slate-700">
+                                                    <div className="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mt-3 p-0.5 border border-slate-200 dark:border-slate-700">
                                                         <div
                                                             className={`h-full rounded-full transition-all duration-700 ${
                                                                 (qmlData.prediction?.probability || 0) >= 0.70
@@ -1075,27 +1063,27 @@ export function Analysis() {
                                                 </div>
 
                                                 {/* Multi-Model Ensemble Component Breakdown */}
-                                                <div className="my-4 bg-slate-950/70 p-3.5 rounded-2xl border border-indigo-500/20 space-y-2">
-                                                    <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 flex justify-between">
+                                                <div className="my-4 bg-slate-50 dark:bg-slate-950/70 p-3.5 rounded-2xl border border-slate-200 dark:border-indigo-500/20 space-y-2">
+                                                    <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground flex justify-between">
                                                         <span>Hybrid Stacking Blend</span>
-                                                        <span className="font-mono text-cyan-300 font-bold">50% VQC • 30% QSVM • 20% XGB</span>
+                                                        <span className="font-mono text-primary font-bold">50% VQC • 30% QSVM • 20% XGB</span>
                                                     </div>
                                                     <div className="grid grid-cols-3 gap-2 text-center font-mono">
-                                                        <div className="bg-slate-900 p-2 rounded-xl border border-indigo-500/20">
-                                                            <div className="text-[9px] text-indigo-300 uppercase">Model A (VQC)</div>
-                                                            <div className="text-xs font-bold text-white">
+                                                        <div className="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-indigo-500/20">
+                                                            <div className="text-[9px] text-indigo-700 dark:text-indigo-300 uppercase">Model A (VQC)</div>
+                                                            <div className="text-xs font-bold text-slate-900 dark:text-white">
                                                                 {((qmlData.ensemble_fusion?.component_probabilities?.vqc_probability || 0.34) * 100).toFixed(1)}%
                                                             </div>
                                                         </div>
-                                                        <div className="bg-slate-900 p-2 rounded-xl border border-purple-500/20">
-                                                            <div className="text-[9px] text-purple-300 uppercase">Model B (QSVM)</div>
-                                                            <div className="text-xs font-bold text-white">
+                                                        <div className="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-purple-500/20">
+                                                            <div className="text-[9px] text-purple-700 dark:text-purple-300 uppercase">Model B (QSVM)</div>
+                                                            <div className="text-xs font-bold text-slate-900 dark:text-white">
                                                                 {((qmlData.ensemble_fusion?.component_probabilities?.qsvm_probability || 0.41) * 100).toFixed(1)}%
                                                             </div>
                                                         </div>
-                                                        <div className="bg-slate-900 p-2 rounded-xl border border-emerald-500/20">
-                                                            <div className="text-[9px] text-emerald-300 uppercase">Classical XGB</div>
-                                                            <div className="text-xs font-bold text-white">
+                                                        <div className="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-emerald-500/20">
+                                                            <div className="text-[9px] text-emerald-700 dark:text-emerald-300 uppercase">Classical XGB</div>
+                                                            <div className="text-xs font-bold text-slate-900 dark:text-white">
                                                                 {((qmlData.ensemble_fusion?.component_probabilities?.xgboost_probability || 0.30) * 100).toFixed(1)}%
                                                             </div>
                                                         </div>
@@ -1103,54 +1091,54 @@ export function Analysis() {
                                                 </div>
 
                                                 {/* Quantum Mathematical Telemetry */}
-                                                <div className="space-y-2 bg-slate-950/60 p-4 rounded-2xl border border-indigo-500/20 text-xs">
-                                                    <div className="flex justify-between items-center text-slate-300">
-                                                        <span className="text-slate-400">Variational Layer Expectation:</span>
-                                                        <span className="font-mono font-bold text-cyan-300">
+                                                <div className="space-y-2 bg-slate-50 dark:bg-slate-950/60 p-4 rounded-2xl border border-slate-200 dark:border-indigo-500/20 text-xs">
+                                                    <div className="flex justify-between items-center text-slate-700 dark:text-slate-300">
+                                                        <span className="text-muted-foreground">Variational Layer Expectation:</span>
+                                                        <span className="font-mono font-bold text-primary">
                                                             ⟨Z₀⟩ = {qmlData.circuit_telemetry?.expectation_value?.toFixed(4) || '0.3412'}
                                                         </span>
                                                     </div>
-                                                    <div className="flex justify-between items-center text-slate-300">
-                                                        <span className="text-slate-400">QSVM Hilbert Decision Margin:</span>
-                                                        <span className="font-mono text-purple-300 font-bold">
+                                                    <div className="flex justify-between items-center text-slate-700 dark:text-slate-300">
+                                                        <span className="text-muted-foreground">QSVM Hilbert Decision Margin:</span>
+                                                        <span className="font-mono text-indigo-700 dark:text-purple-300 font-bold">
                                                             {qmlData.qsvm_prediction?.decision_margin?.toFixed(4) || '-0.1673'}
                                                         </span>
                                                     </div>
-                                                    <div className="flex justify-between items-center text-slate-300">
-                                                        <span className="text-slate-400">Clinical Sensitivity Guarantee:</span>
-                                                        <span className="font-mono text-emerald-400 font-bold">
+                                                    <div className="flex justify-between items-center text-slate-700 dark:text-slate-300">
+                                                        <span className="text-muted-foreground">Clinical Sensitivity Guarantee:</span>
+                                                        <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">
                                                             {((qmlData.ensemble_fusion?.clinical_sensitivity_recall || 0.9375) * 100).toFixed(1)}% Recall
                                                         </span>
                                                     </div>
-                                                    <div className="flex justify-between items-center text-slate-300">
-                                                        <span className="text-slate-400">Inference Latency SLA:</span>
-                                                        <span className="font-mono text-emerald-400 flex items-center gap-1 font-bold">
-                                                            <CheckCircle className="w-3.5 h-3.5 text-emerald-400" />
+                                                    <div className="flex justify-between items-center text-slate-700 dark:text-slate-300">
+                                                        <span className="text-muted-foreground">Inference Latency SLA:</span>
+                                                        <span className="font-mono text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-bold">
+                                                            <CheckCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                                                             {qmlData.ensemble_fusion?.total_latency_ms || 5.2} ms (&lt; 10 ms SLA)
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center gap-2">
-                                                <Info className="w-4 h-4 text-cyan-400 shrink-0" />
+                                            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-muted-foreground flex items-center gap-2">
+                                                <Info className="w-4 h-4 text-primary shrink-0" />
                                                 Computed on 64-dimensional complex Hilbert statevector across 6 qubits.
                                             </div>
                                         </div>
 
                                         {/* Right Column: Explainability - Clinical Factor Impact */}
-                                        <div className="lg:col-span-7 bg-slate-900/80 border border-indigo-500/30 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                                        <div className="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
                                             <div>
                                                 <div className="flex justify-between items-center mb-4">
                                                     <div>
-                                                        <span className="text-[10px] font-black uppercase tracking-widest text-indigo-400">
+                                                        <span className="text-[10px] font-black uppercase tracking-widest text-primary">
                                                             SIH 26139 Clinical Explainability
                                                         </span>
-                                                        <h3 className="text-lg font-black text-white mt-0.5">
+                                                        <h3 className="text-lg font-black text-slate-900 dark:text-white mt-0.5">
                                                             Top Contributing Biomarkers
                                                         </h3>
                                                     </div>
-                                                    <span className="text-xs text-slate-400 font-medium">
+                                                    <span className="text-xs text-muted-foreground font-medium">
                                                         Feature Attribution
                                                     </span>
                                                 </div>
@@ -1162,29 +1150,29 @@ export function Analysis() {
                                                         { feature_label: "Maximum Heart Rate", raw_value: "165 bpm", normal_range: "130-180 bpm", impact_score: 12.0, direction: "protective", clinical_insight: "Healthy chronotropic competence indicates strong cardiac reserve." },
                                                         { feature_label: "Biological Age", raw_value: "54 yrs", normal_range: "18-50 yrs", impact_score: 8.5, direction: "neutral", clinical_insight: "Baseline age profile consistent with standard population parameters." }
                                                     ]).map((factor, fIdx) => (
-                                                        <div key={fIdx} className="bg-slate-950/50 border border-slate-800 p-3 rounded-2xl space-y-1.5">
+                                                        <div key={fIdx} className="bg-slate-50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 p-3 rounded-2xl space-y-1.5">
                                                             <div className="flex justify-between items-center text-xs">
-                                                                <span className="font-bold text-white flex items-center gap-1.5">
+                                                                <span className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
                                                                     <span className={`w-2 h-2 rounded-full ${factor.direction === 'elevating' ? 'bg-rose-400' : factor.direction === 'protective' ? 'bg-emerald-400' : 'bg-slate-400'}`} />
                                                                     {factor.feature_label}
                                                                 </span>
                                                                 <div className="flex items-center gap-2">
-                                                                    <span className="font-mono text-slate-300 font-bold">{factor.raw_value}</span>
+                                                                    <span className="font-mono text-slate-700 dark:text-slate-300 font-bold">{factor.raw_value}</span>
                                                                     <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded-full ${
                                                                         factor.direction === 'elevating'
-                                                                            ? 'bg-rose-500/15 text-rose-300 border border-rose-500/30'
+                                                                            ? 'bg-rose-500/10 text-rose-700 dark:text-rose-300 border border-rose-500/30'
                                                                             : factor.direction === 'protective'
-                                                                            ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
-                                                                            : 'bg-slate-500/15 text-slate-300 border border-slate-500/30'
+                                                                            ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
+                                                                            : 'bg-slate-500/10 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-500/30'
                                                                     }`}>
                                                                         {factor.direction === 'elevating' ? '+ Risk Driver' : factor.direction === 'protective' ? '− Protective' : 'Baseline'}
                                                                     </span>
                                                                 </div>
                                                             </div>
-                                                            <p className="text-[11px] text-slate-300 leading-relaxed">
+                                                            <p className="text-[11px] text-muted-foreground leading-relaxed">
                                                                 {factor.clinical_insight}
                                                             </p>
-                                                            <div className="text-[10px] text-slate-400 font-mono">
+                                                            <div className="text-[10px] text-muted-foreground font-mono">
                                                                 Reference Range: {factor.normal_range}
                                                             </div>
                                                         </div>
@@ -1195,108 +1183,12 @@ export function Analysis() {
                                     </div>
                                 )}
 
-                                {/* Model Verification & Trust Lab (SIH 26139 Requirement) */}
-                                <div className="bg-slate-900/90 border border-indigo-500/30 rounded-3xl p-6 shadow-xl space-y-5">
-                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pb-3 border-b border-indigo-500/20">
-                                        <div>
-                                            <div className="flex items-center gap-2">
-                                                <BarChart3 className="w-4 h-4 text-cyan-400" />
-                                                <h3 className="text-sm font-black uppercase tracking-wider text-white">
-                                                    Model Verification & Trust Lab (SIH 26139)
-                                                </h3>
-                                            </div>
-                                            <p className="text-xs text-slate-400">
-                                                {benchmarkMeta?.dataset || "UCI Cleveland Heart Disease Cohort (Loop Engineering Optimized)"} — Evaluated with stratified 80/20 cross-validation
-                                            </p>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <span className="text-[10px] font-bold text-cyan-300 font-mono bg-slate-950 px-2.5 py-1 rounded-lg border border-cyan-500/30 flex items-center gap-1.5">
-                                                <Sparkles className="w-3 h-3 text-cyan-400" />
-                                                Evaluated on {benchmarkMeta?.test_samples || 200} Test Records ({benchmarkMeta?.total_samples || 1000} Total Cohort)
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    {/* Responsive Dynamic Metrics Table */}
-                                    <div className="overflow-x-auto">
-                                        <table className="w-full text-xs text-left">
-                                            <thead>
-                                                <tr className="text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-800">
-                                                    <th className="py-2.5 px-3">Model Architecture</th>
-                                                    <th className="py-2.5 px-3">Family</th>
-                                                    <th className="py-2.5 px-3">Accuracy</th>
-                                                    <th className="py-2.5 px-3">Precision</th>
-                                                    <th className="py-2.5 px-3">Recall (Sens.)</th>
-                                                    <th className="py-2.5 px-3">Specificity</th>
-                                                    <th className="py-2.5 px-3">F1 Score</th>
-                                                    <th className="py-2.5 px-3">ROC-AUC</th>
-                                                    <th className="py-2.5 px-3">Latency</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody className="divide-y divide-slate-800/60 font-mono">
-                                                {((qmlData?.benchmark_comparison && qmlData.benchmark_comparison.length > 0)
-                                                    ? qmlData.benchmark_comparison
-                                                    : (liveBenchmarks.length > 0 ? liveBenchmarks : [
-                                                        { model_name: "Egreen Quanta Hybrid Stacking (VQC + QSVM + XGBoost)", model_family: "Quantum-Classical Hybrid", accuracy: 0.9750, precision: 0.9512, recall: 0.9873, specificity: 0.9669, f1_score: 0.9689, roc_auc: 0.9951, latency_ms: 5.15 },
-                                                        { model_name: "XGBoost / Gradient Boosting", model_family: "Classical", accuracy: 0.9750, precision: 0.9625, recall: 0.9747, specificity: 0.9752, f1_score: 0.9686, roc_auc: 0.9984, latency_ms: 1.89 },
-                                                        { model_name: "Random Forest", model_family: "Classical", accuracy: 0.9600, precision: 0.9383, recall: 0.9620, specificity: 0.9587, f1_score: 0.9500, roc_auc: 0.9883, latency_ms: 2.07 },
-                                                        { model_name: "Logistic Regression", model_family: "Classical", accuracy: 0.8100, precision: 0.7356, recall: 0.8101, specificity: 0.8099, f1_score: 0.7711, roc_auc: 0.8933, latency_ms: 0.11 },
-                                                        { model_name: "Hybrid VQC (Variational Quantum Classifier)", model_family: "Quantum", accuracy: 0.6100, precision: 0.5455, recall: 0.0759, specificity: 0.9587, f1_score: 0.1333, roc_auc: 0.6105, latency_ms: 2.57 },
-                                                        { model_name: "QSVM Kernel Classifier (Quantum Hilbert)", model_family: "Quantum", accuracy: 0.3550, precision: 0.3355, recall: 0.6456, specificity: 0.1653, f1_score: 0.4416, roc_auc: 0.3457, latency_ms: 0.69 }
-                                                    ])
-                                                ).map((bm, bIdx) => {
-                                                    const isTopHybrid = bm.model_name.includes("Hybrid Stacking");
-                                                    const isQuantum = bm.model_family.includes("Quantum");
-                                                    return (
-                                                        <tr key={bIdx} className={isTopHybrid ? "bg-gradient-to-r from-cyan-950/50 via-indigo-950/50 to-purple-950/50 font-bold border-l-4 border-l-cyan-400" : isQuantum ? "bg-indigo-950/20 font-bold border-l-2 border-l-purple-500" : "text-slate-300 hover:bg-slate-800/40"}>
-                                                            <td className="py-3 px-3 font-sans font-bold flex items-center gap-1.5 text-white">
-                                                                {isTopHybrid ? (
-                                                                    <Sparkles className="w-3.5 h-3.5 text-cyan-400 shrink-0 animate-pulse" />
-                                                                ) : isQuantum ? (
-                                                                    <Atom className="w-3.5 h-3.5 text-purple-400 shrink-0" />
-                                                                ) : null}
-                                                                <span>{bm.model_name}</span>
-                                                                {isTopHybrid && (
-                                                                    <span className="ml-1 text-[8px] font-black uppercase px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
-                                                                        APEX
-                                                                    </span>
-                                                                )}
-                                                            </td>
-                                                            <td className="py-3 px-3">
-                                                                <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-full ${
-                                                                    isTopHybrid
-                                                                        ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/30"
-                                                                        : isQuantum
-                                                                        ? "bg-purple-500/20 text-purple-300"
-                                                                        : "bg-slate-800 text-slate-300"
-                                                                }`}>
-                                                                    {bm.model_family}
-                                                                </span>
-                                                            </td>
-                                                            <td className={`py-3 px-3 font-bold ${isTopHybrid ? "text-cyan-300 text-sm" : "text-emerald-400"}`}>
-                                                                {(bm.accuracy * 100).toFixed(1)}%
-                                                            </td>
-                                                            <td className="py-3 px-3">{(bm.precision * 100).toFixed(1)}%</td>
-                                                            <td className={`py-3 px-3 font-bold ${isTopHybrid ? "text-emerald-400 text-sm" : "text-cyan-300"}`}>
-                                                                {(bm.recall * 100).toFixed(1)}%
-                                                            </td>
-                                                            <td className="py-3 px-3">{(bm.specificity * 100).toFixed(1)}%</td>
-                                                            <td className="py-3 px-3 text-purple-300">{(bm.f1_score * 100).toFixed(1)}%</td>
-                                                            <td className="py-3 px-3 text-amber-300">{bm.roc_auc.toFixed(3)}</td>
-                                                            <td className="py-3 px-3 text-slate-400">{bm.latency_ms.toFixed(1)} ms</td>
-                                                        </tr>
-                                                    );
-                                                })}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
 
                                 {/* Mandatory Clinical Safety Notice */}
-                                <div className="p-4 rounded-2xl bg-indigo-950/60 border border-indigo-500/30 flex items-start gap-3">
-                                    <ShieldCheck className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
-                                    <div className="text-xs text-slate-300 leading-relaxed">
-                                        <strong className="text-white">AI-Assisted Assessment Notice:</strong> {qmlData?.clinical_disclaimer || "This analysis is generated by a Hybrid Quantum Machine Learning pipeline for clinical decision support. It is not a medical diagnosis. Results must be reviewed and confirmed by a licensed clinician before any clinical intervention."}
+                                <div className="p-4 rounded-2xl bg-primary/5 border border-primary/15 flex items-start gap-3">
+                                    <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                                    <div className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                                        <strong className="text-slate-900 dark:text-white">AI-Assisted Assessment Notice:</strong> {qmlData?.clinical_disclaimer || "This analysis is generated by a Hybrid Quantum Machine Learning pipeline for clinical decision support. It is not a medical diagnosis. Results must be reviewed and confirmed by a licensed clinician before any clinical intervention."}
                                     </div>
                                 </div>
                             </div>
