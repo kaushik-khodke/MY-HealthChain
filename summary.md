@@ -11,9 +11,11 @@
 
 ## 📌 1. Executive Summary
 
-**MyHealthChain** (also known as **Stelix**) is an enterprise-grade, AI-driven emergency healthcare ecosystem built to solve critical bottlenecks in emergency medical triage, hospital bed allocation, medical supply shortages, and patient record interoperability.
+**MyHealthChain** (also known as **Stelix**) is an enterprise-grade healthcare and emergency clinical ecosystem engineered for **Smart India Hackathon (SIH) 2026 Problem Statement ID: 26139** presented by **Egreen Quanta**: *"Hybrid Quantum Machine Learning Platform for Early Disease Detection"*.
 
-By unifying **4 specialized portals** (Patient, Doctor, Pharmacist, and Hospital Command Center) with **AI/ML prediction engines**, **WhatsApp automated bridges**, **voice telephony**, and **decentralized IPFS record storage**, MyHealthChain provides an end-to-end infrastructure for modern emergency response and hospital resource balancing.
+The platform addresses two critical medical bottlenecks:
+1. **Sub-Clinical Early Disease Detection via Hybrid QML:** Overcoming classical ML limitations on noisy, correlated biomedical data by deploying a 6-qubit Variational Quantum Classifier (VQC), Quantum Neural Networks (QNN), and Quantum Black Hole Optimization (QBHO) for early cardiovascular, diabetic, and pulmonary risk prediction.
+2. **Autonomous Emergency Triage & Command Infrastructure:** Unifying **4 specialized portals** (Patient, Doctor, Pharmacist, and Hospital Command Center) with **ESI 1–5 triage prediction**, **WhatsApp automated bridges**, **voice telephony**, and **decentralized IPFS record storage** to eliminate ER bottlenecks and balance regional bed/oxygen supplies in real time.
 
 ---
 
@@ -25,6 +27,8 @@ By unifying **4 specialized portals** (Patient, Doctor, Pharmacist, and Hospital
 | **Styling & UX** | **TailwindCSS**, **Lucide React**, Glassmorphism | Clean, responsive enterprise UI design system |
 | **Backend Engine** | **FastAPI (Python 3.12)**, **Uvicorn** | High-performance asynchronous REST API gateway |
 | **Database & Realtime** | **Supabase (PostgreSQL)** | Cloud database with instant WebSocket subscriptions |
+| **Quantum ML (QML)** | **PennyLane** + **NumPy Statevector Engine** | 6-qubit Variational Quantum Classifier (VQC) with angle encoding & exact Pauli-Z observables |
+| **QML Optimization** | **Quantum Black Hole Optimization (QBHO)** | Egreen Quanta quantum-inspired metaheuristic for feature selection & barren plateau avoidance |
 | **Primary AI Model** | **Google Gemini 2.0 Flash** | Multimodal clinical strategic analytics, OCR, and document analysis |
 | **Triage ML Model** | **XGBoost Classifier** | Real-time Emergency Severity Index (ESI 1-5 / RED-BLUE) triage prediction |
 | **Risk Classifier** | **Scikit-Learn (Random Forest)** | RegEx OCR vital extraction & chronic health risk classification |
@@ -140,20 +144,31 @@ The nerve center for hospital administrators, ER triage leads, and regional heal
               │                               │                               │
               └───────────────────────────────┼───────────────────────────────┘
                                               │
-                                     ┌────────▼────────┐
-                                     │ Gemini 2.0 Flash│
-                                     │ (Strategic AI)  │
-                                     └─────────────────┘
+                     ┌────────────────────────┼────────────────────────┐
+                     │                        │                        │
+            ┌────────▼────────┐      ┌────────▼────────┐      ┌────────▼────────┐
+            │  Hybrid QML VQC │      │  QBHO Optimizer │      │ Gemini 2.0 Flash│
+            │ (PennyLane/NumPy)│     │(Feature Select) │      │ (Strategic AI)  │
+            └─────────────────┘      └─────────────────┘      └─────────────────┘
 ```
 
-1. **XGBoost ESI Triage Classifier (`ml_triage.py`):** Evaluates systolic BP, diastolic BP, heart rate, SpO2, body temperature, age, and chief complaint to assign an ESI priority rating (RED to BLUE) and an urgency score (0-100).
-2. **Random Forest Chronic Risk Engine (`ml_engine.py`):** Combines RegEx document parsing with Random Forest classification to categorize overall patient health risk (**Healthy**, **Warning**, **Critical**).
-3. **4-Signal Inflow Forecasting Engine (`resource_load.py`):**
+1. **Hybrid Quantum-Classical VQC Engine (`backend/qml/`):**
+   * **6-Qubit Parameterized Circuit:** Maps 6 standardized clinical biomarkers into quantum angles ($\phi = 2\arctan(z)$) via $R_y(\phi)$ and $R_z(\phi/2)$ rotations.
+   * **2 Entangling Layers:** 36 variational angles ($R_x, R_y, R_z$) interconnected by circular CNOT gates.
+   * **Exact Measurement:** Pauli-$Z$ observable expectation value ($\langle Z_0 \rangle, \langle Z_1 \rangle$) with calibrated sigmoid probability output.
+   * **Dual Backends:** PennyLane `default.qubit` simulator + zero-dependency exact NumPy statevector fallback.
+2. **Egreen Quanta Algorithmic Extensions:**
+   * **Quantum Black Hole Optimization (QBHO):** Quantum-inspired metaheuristic for optimal biomarker feature selection and escaping barren plateaus in variational angle tuning.
+   * **Quantum Neural Networks (QNN) & Quantum Gates:** Modeled after Egreen Quanta's stem cell discovery architecture to capture multi-analyte sub-clinical degenerative signatures.
+   * **Quantum Support Vector Machines (QSVM):** Quantum kernel matrix evaluation ($K(x_i, x_j) = |\langle\phi(x_i)|\phi(x_j)\rangle|^2$) for complex non-linear classification.
+3. **XGBoost ESI Triage Classifier (`ml_triage.py`):** Evaluates systolic BP, diastolic BP, heart rate, SpO2, body temperature, age, and chief complaint to assign an ESI priority rating (RED to BLUE) and an urgency score (0-100).
+4. **Random Forest Chronic Risk Engine (`ml_engine.py`):** Combines RegEx document parsing with Random Forest classification to categorize overall patient health risk (**Healthy**, **Warning**, **Critical**).
+5. **4-Signal Inflow Forecasting Engine (`resource_load.py`):**
    * *Signal 1:* 4-week rolling time-series average.
    * *Signal 2:* Bed occupancy pressure multiplier.
    * *Signal 3:* IPFS chronic disease vector scans.
    * *Signal 4:* Seasonal weather multipliers (Summer, Monsoon, Winter).
-4. **Gemini 2.0 Flash Strategic Analyzer (`ai_config.py`):** Generates high-level executive command summaries, detects operational bottlenecks, and suggests automated resource transfers between regional wards.
+6. **Gemini 2.0 Flash Strategic Analyzer (`ai_config.py`):** Generates high-level executive command summaries, detects operational bottlenecks, and suggests automated resource transfers between regional wards.
 
 ---
 
@@ -173,6 +188,10 @@ The nerve center for hospital administrators, ER triage leads, and regional heal
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
+| `POST` | `/patient/qml-analysis` | **Executes 6-qubit Hybrid VQC disease prediction & circuit telemetry** |
+| `GET` | `/patient/qml-benchmarks` | **Returns measured benchmarks: QML vs RF, Logistic Regression, XGBoost** |
+| `GET` | `/patient/qml-models` | Lists registered disease-specific QML models & quantum specs |
+| `GET` | `/patient/qml-demo-profiles` | Returns test profiles (Low Risk, High Risk, Incomplete Records) |
 | `GET` | `/health` | Diagnostics & database connectivity check |
 | `POST` | `/predict-triage` | Evaluates vitals via XGBoost ML model and returns ESI priority |
 | `POST` | `/pharmacy/chat` | AI Pharmacy chatbot query handling |

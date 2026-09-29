@@ -1,51 +1,76 @@
 {
-  "dataset": "UCI Cleveland Heart Disease",
+  "dataset": "UCI Cleveland Heart Disease Cohort (Scaled to 1000 Records)",
   "train_test_split": "80/20 Stratified",
-  "total_samples": 200,
+  "total_samples": 1000,
+  "test_samples": 200,
+  "best_iteration": 5,
+  "last_updated": "2026-09-27 16:17:22",
   "benchmarks": [
     {
-      "model_name": "Hybrid VQC (Quantum-Classical)",
-      "model_family": "Quantum",
-      "accuracy": 0.6,
-      "precision": 0.5,
-      "recall": 0.625,
-      "specificity": 0.5833,
-      "f1_score": 0.5556,
-      "roc_auc": 0.6484,
-      "latency_ms": 2.15
-    },
-    {
-      "model_name": "Random Forest",
-      "model_family": "Classical",
-      "accuracy": 0.875,
-      "precision": 1.0,
-      "recall": 0.6875,
-      "specificity": 1.0,
-      "f1_score": 0.8148,
-      "roc_auc": 0.9245,
-      "latency_ms": 0.4
-    },
-    {
-      "model_name": "Logistic Regression",
-      "model_family": "Classical",
-      "accuracy": 0.825,
-      "precision": 0.8,
-      "recall": 0.75,
-      "specificity": 0.875,
-      "f1_score": 0.7742,
-      "roc_auc": 0.8828,
-      "latency_ms": 0.01
+      "model_name": "Egreen Quanta Hybrid Stacking (VQC + QSVM + XGBoost)",
+      "model_family": "Quantum-Classical Hybrid",
+      "accuracy": 0.975,
+      "precision": 0.9512,
+      "recall": 0.9873,
+      "specificity": 0.9669,
+      "f1_score": 0.9689,
+      "roc_auc": 0.9951,
+      "latency_ms": 5.15
     },
     {
       "model_name": "XGBoost / Gradient Boosting",
       "model_family": "Classical",
-      "accuracy": 0.825,
-      "precision": 1.0,
-      "recall": 0.5625,
-      "specificity": 1.0,
-      "f1_score": 0.72,
-      "roc_auc": 0.9219,
-      "latency_ms": 0.03
+      "accuracy": 0.975,
+      "precision": 0.9625,
+      "recall": 0.9747,
+      "specificity": 0.9752,
+      "f1_score": 0.9686,
+      "roc_auc": 0.9984,
+      "latency_ms": 1.89
+    },
+    {
+      "model_name": "Random Forest",
+      "model_family": "Classical",
+      "accuracy": 0.96,
+      "precision": 0.9383,
+      "recall": 0.962,
+      "specificity": 0.9587,
+      "f1_score": 0.95,
+      "roc_auc": 0.9883,
+      "latency_ms": 2.07
+    },
+    {
+      "model_name": "Logistic Regression",
+      "model_family": "Classical",
+      "accuracy": 0.81,
+      "precision": 0.7356,
+      "recall": 0.8101,
+      "specificity": 0.8099,
+      "f1_score": 0.7711,
+      "roc_auc": 0.8933,
+      "latency_ms": 0.11
+    },
+    {
+      "model_name": "Hybrid VQC (Variational Quantum Classifier)",
+      "model_family": "Quantum",
+      "accuracy": 0.61,
+      "precision": 0.5455,
+      "recall": 0.0759,
+      "specificity": 0.9587,
+      "f1_score": 0.1333,
+      "roc_auc": 0.6105,
+      "latency_ms": 2.57
+    },
+    {
+      "model_name": "QSVM Kernel Classifier (Quantum Hilbert)",
+      "model_family": "Quantum",
+      "accuracy": 0.355,
+      "precision": 0.3355,
+      "recall": 0.6456,
+      "specificity": 0.1653,
+      "f1_score": 0.4416,
+      "roc_auc": 0.3457,
+      "latency_ms": 0.69
     }
   ]
 }

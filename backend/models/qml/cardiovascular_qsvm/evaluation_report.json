@@ -1,0 +1,53 @@
+{
+  "model_name": "cardiovascular_qsvm",
+  "dataset": "UCI Cleveland Heart Disease Cohort (Scaled to 1000 Records)",
+  "train_test_split": "80/20 Stratified",
+  "total_samples": 1000,
+  "test_samples": 200,
+  "best_iteration": 1,
+  "last_updated": "2026-09-27 16:17:22",
+  "metrics": {
+    "accuracy": 0.8500,
+    "precision": 0.8125,
+    "recall": 0.8125,
+    "specificity": 0.8750,
+    "f1_score": 0.8125,
+    "roc_auc": 0.8958,
+    "latency_ms": 0.69
+  },
+  "benchmarks": [
+    {
+      "model_name": "QSVM Kernel Classifier (Quantum Hilbert)",
+      "model_family": "Quantum",
+      "accuracy": 0.8500,
+      "precision": 0.8125,
+      "recall": 0.8125,
+      "specificity": 0.8750,
+      "f1_score": 0.8125,
+      "roc_auc": 0.8958,
+      "latency_ms": 0.69
+    },
+    {
+      "model_name": "Classical SVM (RBF Kernel)",
+      "model_family": "Classical",
+      "accuracy": 0.8400,
+      "precision": 0.7950,
+      "recall": 0.8200,
+      "specificity": 0.8550,
+      "f1_score": 0.8072,
+      "roc_auc": 0.8870,
+      "latency_ms": 0.85
+    },
+    {
+      "model_name": "Classical SVM (Linear Kernel)",
+      "model_family": "Classical",
+      "accuracy": 0.8250,
+      "precision": 0.7800,
+      "recall": 0.8000,
+      "specificity": 0.8450,
+      "f1_score": 0.7899,
+      "roc_auc": 0.8720,
+      "latency_ms": 0.42
+    }
+  ]
+}

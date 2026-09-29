@@ -71,15 +71,48 @@ async def get_qml_benchmarks(model_id: str = "cardiovascular_vqc"):
     """
     Returns real experimental performance benchmarks comparing the Hybrid VQC
     against classical baselines (Logistic Regression, Random Forest, XGBoost)
-    on the benchmark UCI Cleveland Heart Disease dataset.
+    dynamically loaded from the latest loop engineering evaluation report.
     """
-    benchmarks = model_registry.get_benchmark_report(model_id)
+    report = model_registry.get_evaluation_report_full(model_id)
     return {
         "success": True,
-        "dataset": "UCI Cleveland Heart Disease (303 records)",
-        "evaluation_strategy": "80/20 Stratified Split",
-        "benchmarks": benchmarks
+        "dataset": report["dataset"],
+        "evaluation_strategy": report["train_test_split"],
+        "total_samples": report["total_samples"],
+        "test_samples": report["test_samples"],
+        "best_iteration": report["best_iteration"],
+        "last_updated": report["last_updated"],
+        "benchmarks": report["benchmarks"]
     }
+
+
+@router.get("/patient/qml-training-history")
+@router.get("/qml/training-history")
+async def get_qml_training_history(model_id: str = "cardiovascular_vqc"):
+    """Returns the overtime history of loop engineering iterations and checkpoints."""
+    history_path = model_registry.base_dir / model_id / "training_history.json"
+    if history_path.exists():
+        try:
+            import json
+            with open(history_path, "r") as f:
+                history = json.load(f)
+                return {"success": True, "history": history}
+        except Exception as e:
+            logger.error("error_loading_training_history", error=e)
+    return {"success": True, "history": []}
+
+
+@router.post("/patient/qml-train-loop")
+@router.post("/qml/train-loop")
+async def trigger_loop_training(background_tasks: BackgroundTasks):
+    """Triggers the LoopEngineeringTrainer to scale data and optimize models in background."""
+    from qml.loop_trainer import run_loop_training
+    background_tasks.add_task(run_loop_training)
+    return {
+        "success": True,
+        "message": "Loop Engineering Training job started in background. Check /patient/qml-benchmarks for updated metrics."
+    }
+
 
 
 @router.get("/patient/qml-models")

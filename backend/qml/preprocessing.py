@@ -39,6 +39,26 @@ TRAINING_STATS = {
 }
 
 
+import re
+
+def _extract_float(val: Any) -> Optional[float]:
+    """Robustly extracts floating point numerical value from string representations with units."""
+    if val is None:
+        return None
+    if isinstance(val, (int, float)):
+        return float(val)
+    s = str(val).strip()
+    if "/" in s:
+        s = s.split("/")[0].strip()
+    match = re.search(r"[-+]?\d*\.?\d+", s)
+    if match:
+        try:
+            return float(match.group(0))
+        except (ValueError, TypeError):
+            return None
+    return None
+
+
 def normalize_input_dictionary(raw_data: Dict[str, Any]) -> Dict[str, Any]:
     """
     Translates unstructured report keys and aliases into canonical clinical feature names.
@@ -58,51 +78,42 @@ def normalize_input_dictionary(raw_data: Dict[str, Any]) -> Dict[str, Any]:
     # 1. Age
     for alias in ["age", "biological_age", "patient_age", "years_old"]:
         if alias in flat_data and flat_data[alias] is not None:
-            try:
-                normalized["age"] = float(flat_data[alias])
+            num = _extract_float(flat_data[alias])
+            if num is not None:
+                normalized["age"] = num
                 break
-            except (ValueError, TypeError):
-                pass
 
     # 2. Resting Blood Pressure (Systolic)
     for alias in ["trestbps", "systolic", "systolic_bp", "bp_systolic", "bp", "resting_blood_pressure", "blood_pressure"]:
         if alias in flat_data and flat_data[alias] is not None:
-            val = flat_data[alias]
-            # If string format like "120/80", extract systolic
-            if isinstance(val, str) and "/" in val:
-                val = val.split("/")[0].strip()
-            try:
-                normalized["trestbps"] = float(val)
+            num = _extract_float(flat_data[alias])
+            if num is not None:
+                normalized["trestbps"] = num
                 break
-            except (ValueError, TypeError):
-                pass
 
     # 3. Serum Cholesterol
     for alias in ["chol", "cholesterol", "serum_cholesterol", "total_cholesterol", "lipid_cholesterol"]:
         if alias in flat_data and flat_data[alias] is not None:
-            try:
-                normalized["chol"] = float(flat_data[alias])
+            num = _extract_float(flat_data[alias])
+            if num is not None:
+                normalized["chol"] = num
                 break
-            except (ValueError, TypeError):
-                pass
 
     # 4. Maximum Heart Rate (thalach)
     for alias in ["thalach", "heart_rate", "max_heart_rate", "pulse", "pulse_rate", "hr", "bpm"]:
         if alias in flat_data and flat_data[alias] is not None:
-            try:
-                normalized["thalach"] = float(flat_data[alias])
+            num = _extract_float(flat_data[alias])
+            if num is not None:
+                normalized["thalach"] = num
                 break
-            except (ValueError, TypeError):
-                pass
 
     # 5. ST Depression (oldpeak)
     for alias in ["oldpeak", "st_depression", "st_segment_depression", "st_change", "st_drop"]:
         if alias in flat_data and flat_data[alias] is not None:
-            try:
-                normalized["oldpeak"] = float(flat_data[alias])
+            num = _extract_float(flat_data[alias])
+            if num is not None:
+                normalized["oldpeak"] = num
                 break
-            except (ValueError, TypeError):
-                pass
 
     # 6. Chest Pain (cp)
     for alias in ["cp", "chest_pain", "chest_pain_type", "angina_type"]:

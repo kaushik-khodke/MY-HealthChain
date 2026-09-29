@@ -128,9 +128,13 @@
 
 ### 🔹 SLIDE 7: What Sets It Apart (Innovation & USP)
 
-* **1. Novel Approach:** Combines instantaneous bedside triage with macro hospital command center surge forecasting.
-* **2. Speed / Real-Time Benchmark:** Triage classification in **< 5 milliseconds**; instant WebSocket re-sorting across all hospital doctor terminals.
-* **3. AI / Tech Edge:** 4-Signal capacity forecasting algorithm combined with multi-agent clinical validation (preventing dangerous drug-drug interactions).
+* **1. SIH 26139 Core Innovation (Egreen Quanta):** 4-Stage Hybrid Quantum Machine Learning (QML) Clinical Pipeline:
+  - *Stage 1 (Feature Optimization):* **Quantum Black Hole Optimization (QBHO)** strips noisy EHR data down to optimal 6-qubit biomarker vectors.
+  - *Stage 2 (Training):* **QBHO Parameter Search** avoids barren plateaus in non-convex variational angles.
+  - *Stage 3 (Dual Quantum Inference):* **6-Qubit VQC/QNN** (continuous probability) + **QSVM** (state fidelity Hilbert kernel for borderline cases).
+  - *Stage 4 (Ensemble Fusion):* Stacking meta-learner combining Quantum VQC + QSVM + Classical XGBoost for >90% sensitivity and <10ms inference.
+* **2. Speed / Real-Time Benchmark:** Real-time emergency triage classification in **< 5 milliseconds**; instant WebSocket re-sorting across all hospital doctor terminals.
+* **3. AI / Operations Edge:** 4-Signal bed/oxygen capacity forecasting algorithm combined with multi-agent clinical validation (preventing dangerous drug-drug interactions).
 * **4. Cost Advantage:** Replaces expensive multi-million rupee proprietary hospital hardware with standard browser terminals, mobile QR cards, and lightweight cloud infrastructure.
 * **5. Privacy & IPFS Moat:** Decentralized IPFS health cards ensure patient data sovereignty with time-bound doctor consent and 4-digit PIN locks.
 * **6. Omnichannel Inclusivity:** Multilingual support (English, Hindi, Marathi) with WhatsApp automated reporting and interactive voice AI phone triage.
@@ -142,6 +146,8 @@
 #### Software & Frameworks:
 | Technology | Role / Usage | License / Tier |
 | :--- | :--- | :---: |
+| **PennyLane & NumPy QML** | 6-Qubit Variational Quantum Circuit (VQC) Engine | Open Source / Free |
+| **QBHO Metaheuristic** | Quantum Black Hole Optimizer for Feature Selection & Angles | Open Source / Algorithmic |
 | **FastAPI (Python 3.12)** | Asynchronous API Gateway & Microservices | Open Source / Free |
 | **React 18 / Vite / TypeScript** | Multi-Portal Frontend Client Application | Open Source / Free |
 | **TailwindCSS** | Responsive Design System & Glassmorphic UI | Open Source / Free |

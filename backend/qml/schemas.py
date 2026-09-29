@@ -95,5 +95,9 @@ class QMLAnalysisResponse(BaseModel):
         "This output is computed by a Hybrid Quantum Machine Learning model for clinical decision support "
         "and is not a final medical diagnosis."
     )
+    qbho_selection: Optional[Dict[str, Any]] = None
+    barren_plateau_mitigation: Optional[Dict[str, Any]] = None
+    qsvm_prediction: Optional[Dict[str, Any]] = None
+    ensemble_fusion: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
     insufficient_data: bool = False

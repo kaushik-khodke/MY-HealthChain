@@ -10,6 +10,14 @@ import time
 import signal
 from dotenv import load_dotenv
 
+try:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
 # Load environment variables
 backend_dir = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(backend_dir, "..", ".env"), override=True)

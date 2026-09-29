@@ -128,3 +128,96 @@ Dispatches an official AI Health Insight report directly to a patient's WhatsApp
   "message": "Official AI Health Report sent via WhatsApp to 8806275531!"
 }
 ```
+
+---
+
+## ⚛️ 5. Hybrid Quantum Machine Learning (SIH 26139: Egreen Quanta)
+
+### `POST /patient/qml-analysis`
+Executes real 6-qubit Variational Quantum Classifier (VQC) early disease prediction. Evaluates patient vitals using angle encoding and circular CNOT entanglement over PennyLane/NumPy engines, returning calibrated disease probability, risk level, clinical explainability drivers, and quantum circuit telemetry.
+
+#### Request Body
+```json
+{
+  "patient_id": "4720f774-69e0-4485-9b88-6f14cf8c287f",
+  "vitals": {
+    "age": 64,
+    "sex": 1,
+    "trestbps": 165,
+    "chol": 290,
+    "thalach": 118,
+    "oldpeak": 2.8,
+    "cp": 0
+  }
+}
+```
+
+#### Response (200 OK)
+```json
+{
+  "success": true,
+  "model": "Hybrid Quantum-Classical VQC",
+  "framework": "PennyLane.default.qubit (Exact Statevector Simulator)",
+  "model_version": "1.0.0",
+  "prediction": {
+    "disease": "cardiovascular_disease",
+    "disease_label": "Cardiovascular Disease / Coronary Heart Disease Indication",
+    "class_label": 1,
+    "probability": 0.8842,
+    "risk_level": "HIGH",
+    "confidence": 0.7684
+  },
+  "features_used": ["age", "trestbps", "chol", "thalach", "oldpeak", "cp"],
+  "circuit_telemetry": {
+    "qubit_count": 6,
+    "circuit_depth": 12,
+    "ansatz_type": "StronglyEntanglingVariationalLayers",
+    "feature_map": "AngleFeatureMap_Ry_Rz",
+    "entanglement_gates": 12,
+    "backend_name": "PennyLane.default.qubit (Exact Statevector Simulator)",
+    "expectation_value": 0.6214,
+    "quantum_execution_status": "EXECUTED_REAL_CIRCUIT"
+  },
+  "explainability": [
+    {
+      "feature_name": "oldpeak",
+      "feature_label": "ST Segment Depression (Ischemia Marker)",
+      "raw_value": 2.8,
+      "normal_range": "0.0 - 0.5 mm (Normal Repolarization)",
+      "impact_score": 22.8,
+      "direction": "elevating",
+      "clinical_insight": "Substantial exercise-induced ST depression is a strong indicator of subendocardial ischemia."
+    }
+  ],
+  "benchmark_comparison": [
+    {
+      "model_name": "Hybrid VQC (Quantum-Classical)",
+      "model_family": "Quantum",
+      "accuracy": 0.8361,
+      "precision": 0.8235,
+      "recall": 0.875,
+      "specificity": 0.7931,
+      "f1_score": 0.8485,
+      "roc_auc": 0.8922,
+      "latency_ms": 3.42
+    }
+  ],
+  "clinical_disclaimer": "AI-Assisted Assessment — Requires Clinician Confirmation. This output is computed by a Hybrid Quantum Machine Learning model for clinical decision support and is not a final medical diagnosis."
+}
+```
+
+---
+
+### `GET /patient/qml-benchmarks`
+Returns empirical benchmark metrics comparing the Hybrid VQC against classical models (Random Forest, Logistic Regression, XGBoost) on the UCI Cleveland Heart Disease dataset.
+
+---
+
+### `GET /patient/qml-models`
+Lists all registered QML disease classification models, required clinical biomarkers, and quantum specifications.
+
+---
+
+### `GET /patient/qml-demo-profiles`
+Returns pre-configured test profiles (`low_risk_patient`, `high_risk_patient`, `incomplete_record`) for clinical testing.
+

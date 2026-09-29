@@ -119,7 +119,6 @@ export default function Dashboard() {
           .eq("patient_id", patientId),
         supabase
           .from("consent_requests")
-          .from("consent_requests")
           .select("id", { count: "exact" })
           .eq("patient_id", patientId)
           .eq("status", "pending"),

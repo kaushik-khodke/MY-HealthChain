@@ -80,6 +80,7 @@ from routes.federation import router as federation_router
 from routes.hms_core import router as hms_core_router
 from routes.hms_diagnostics_rcm import router as hms_rcm_router
 from routes.hms_surgical_interop import router as hms_surgical_router
+from routes.qml_router import router as qml_router
 
 app.include_router(health_router)
 app.include_router(triage_router)
@@ -93,6 +94,7 @@ app.include_router(federation_router)
 app.include_router(hms_core_router)
 app.include_router(hms_rcm_router)
 app.include_router(hms_surgical_router)
+app.include_router(qml_router)
 
 PORT = int(os.getenv("PORT", 8000))
 
@@ -2780,8 +2782,8 @@ async def analyze_health(request: HealthAnalysisRequest):
         try:
             from qml.predict import run_qml_disease_prediction
             qml_input = dict(ctx.vitals) if ctx.vitals else {}
-            if ctx.bp_val and "/" in str(ctx.bp_val):
-                qml_input["trestbps"] = ctx.bp_val.split("/")[0].strip()
+            if ctx.bp_val:
+                qml_input["trestbps"] = str(ctx.bp_val).split("/")[0].strip() if "/" in str(ctx.bp_val) else str(ctx.bp_val)
             if ctx.sugar_val:
                 qml_input["sugar"] = ctx.sugar_val
             if ctx.hr_val:
@@ -2791,6 +2793,14 @@ async def analyze_health(request: HealthAnalysisRequest):
                     qml_input["age"] = ctx.patient_info["age"]
                 if ctx.patient_info.get("gender"):
                     qml_input["sex"] = 1 if str(ctx.patient_info["gender"]).lower().startswith("m") else 0
+
+            # Ensure clinical baseline fallbacks if patient had incomplete vitals
+            if not qml_input.get("age"):
+                qml_input["age"] = 54.0
+            if not qml_input.get("trestbps"):
+                qml_input["trestbps"] = 120.0
+            if not qml_input.get("thalach"):
+                qml_input["thalach"] = 72.0
 
             qml_res = run_qml_disease_prediction(qml_input, patient_id=request.user_id)
             if qml_res:
