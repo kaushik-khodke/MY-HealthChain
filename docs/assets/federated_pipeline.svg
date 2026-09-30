@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="flBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <marker id="flArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="flArrowRed" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+    <marker id="flArrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <style>
+    .fl-title { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 22px; font-weight: 800; fill: #f8fafc; }
+    .fl-sub { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 13px; font-weight: 500; fill: #94a3b8; }
+    .node-title { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 13px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+    .step-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 11px; font-weight: 600; fill: #94a3b8; }
+    .msg-text { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #cbd5e1; }
+    .box-hdr { font-family: 'Segoe UI', -apple-system, sans-serif; font-size: 12px; font-weight: 700; fill: #38bdf8; }
+  </style>
+
+  <rect width="1100" height="680" fill="url(#flBg)" rx="16"/>
+  <rect x="1" y="1" width="1098" height="678" fill="none" stroke="#334155" stroke-width="1.5" rx="16"/>
+
+  <!-- Top Title -->
+  <g transform="translate(40, 42)">
+    <text class="fl-title" x="0" y="0">🔄 Privacy-Preserving Collaborative Federated Retraining Network</text>
+    <text class="fl-sub" x="0" y="24">Zero Raw Radiographs Exfiltrated | DP-SGD (ε ≤ 5.0) | Byzantine Sentinel Multi-Krum Defense | Pinata IPFS</text>
+  </g>
+
+  <!-- Participant Columns -->
+  <!-- 1. Coordinator -->
+  <g transform="translate(100, 100)">
+    <rect x="-80" y="0" width="160" height="42" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" rx="6"/>
+    <text class="node-title" x="0" y="26">🌐 FL Coordinator</text>
+    <line x1="0" y1="42" x2="0" y2="540" stroke="#334155" stroke-dasharray="4 4" stroke-width="1.5"/>
+  </g>
+
+  <!-- 2. Hospital 1 (GE) -->
+  <g transform="translate(320, 100)">
+    <rect x="-80" y="0" width="160" height="42" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="6"/>
+    <text class="node-title" x="0" y="26">🏥 Apollo (GE Scanner)</text>
+    <line x1="0" y1="42" x2="0" y2="540" stroke="#334155" stroke-dasharray="4 4" stroke-width="1.5"/>
+  </g>
+
+  <!-- 3. Hospital 2 (Siemens) -->
+  <g transform="translate(540, 100)">
+    <rect x="-80" y="0" width="160" height="42" fill="#1e293b" stroke="#10b981" stroke-width="1.5" rx="6"/>
+    <text class="node-title" x="0" y="26">🏥 Fortis (Siemens)</text>
+    <line x1="0" y1="42" x2="0" y2="540" stroke="#334155" stroke-dasharray="4 4" stroke-width="1.5"/>
+  </g>
+
+  <!-- 4. Rogue Node -->
+  <g transform="translate(760, 100)">
+    <rect x="-80" y="0" width="160" height="42" fill="#450a0a" stroke="#ef4444" stroke-width="1.5" rx="6"/>
+    <text class="node-title" x="0" y="26" fill="#fca5a5">🦹 Adversarial Rogue</text>
+    <line x1="0" y1="42" x2="0" y2="540" stroke="#450a0a" stroke-dasharray="4 4" stroke-width="1.5"/>
+  </g>
+
+  <!-- 5. Pinata IPFS -->
+  <g transform="translate(980, 100)">
+    <rect x="-80" y="0" width="160" height="42" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5" rx="6"/>
+    <text class="node-title" x="0" y="26">📦 Pinata IPFS</text>
+    <line x1="0" y1="42" x2="0" y2="540" stroke="#334155" stroke-dasharray="4 4" stroke-width="1.5"/>
+  </g>
+
+  <!-- Step 1: Broadcast Checkpoints -->
+  <path d="M 100 170 L 755 170" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#flArrow)"/>
+  <text class="step-text" x="110" y="162">Stage 1: Broadcast Global Model Weights W_t</text>
+
+  <!-- Step 2: Local DP-SGD Training Callout -->
+  <g transform="translate(240, 200)">
+    <rect width="380" height="45" fill="#0f172a" stroke="#10b981" stroke-width="1" rx="4"/>
+    <text class="box-hdr" x="10" y="18" fill="#6ee7b7">Stage 2 &amp; 3: Local DP-SGD Retraining (Zero Raw DICOMs Exfiltrated)</text>
+    <text class="msg-text" x="10" y="34">• Gradient Clipping (C=1.0) • Gaussian Noise Perturbation (ε ≤ 5.0) • FedBN Isolation</text>
+  </g>
+
+  <!-- Step 3: Gradient Transmission -->
+  <path d="M 320 270 L 105 270" stroke="#10b981" stroke-width="1.5" marker-end="url(#flArrowGreen)"/>
+  <text class="msg-text" x="130" y="263">Δw_1 (DP-SGD Protected)</text>
+
+  <path d="M 540 295 L 105 295" stroke="#10b981" stroke-width="1.5" marker-end="url(#flArrowGreen)"/>
+  <text class="msg-text" x="130" y="288">Δw_2 (DP-SGD Protected)</text>
+
+  <!-- Adversarial Attack -->
+  <path d="M 760 330 L 105 330" stroke="#ef4444" stroke-width="2" marker-end="url(#flArrowRed)"/>
+  <text class="msg-text" x="420" y="322" fill="#fca5a5">Adversarial Poisoned Gradient Attack (-5.0 · w)</text>
+
+  <!-- Byzantine Sentinel Defense Box -->
+  <g transform="translate(30, 360)">
+    <rect width="360" height="65" fill="#1e1b4b" stroke="#ef4444" stroke-width="1.5" rx="6"/>
+    <text class="box-hdr" x="12" y="20" fill="#f87171">🛡️ Stage 5: Byzantine Sentinel Screening</text>
+    <text class="msg-text" x="12" y="38">• Directional Cosine Similarity &lt; 0.05 ➔ QUARANTINE Rogue Silo</text>
+    <text class="msg-text" x="12" y="52">• Multi-Krum Geometric Outlier Rejection removes poison</text>
+  </g>
+
+  <!-- FedBN & Aggregation -->
+  <g transform="translate(30, 445)">
+    <rect width="360" height="50" fill="#064e3b" stroke="#10b981" stroke-width="1.5" rx="6"/>
+    <text class="box-hdr" x="12" y="20" fill="#34d399">Stage 6 &amp; 7: FedBN Harmonization &amp; FedAvg</text>
+    <text class="msg-text" x="12" y="36">• Cohort-weighted FedAvg over clean silos • Local BatchNorm isolated</text>
+  </g>
+
+  <!-- Consensus Gate Check -->
+  <g transform="translate(30, 515)">
+    <rect width="360" height="42" fill="#0c4a6e" stroke="#0284c7" stroke-width="1.5" rx="6"/>
+    <text class="box-hdr" x="12" y="18" fill="#38bdf8">Stage 8: Consensus Validation Gate</text>
+    <text class="msg-text" x="12" y="32">Verify ΔAUC ≥ -0.02 before pinning to IPFS</text>
+  </g>
+
+  <!-- Pin to IPFS -->
+  <path d="M 100 580 L 975 580" stroke="#f43f5e" stroke-width="2" marker-end="url(#flArrow)"/>
+  <text class="step-text" x="420" y="572" fill="#fda4af">Stage 9: Pin Verified Retrained Model to IPFS &amp; SHA-256 Provenance Ledger</text>
+</svg>

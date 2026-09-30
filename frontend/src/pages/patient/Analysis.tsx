@@ -497,8 +497,8 @@ export function Analysis() {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans text-slate-900 dark:text-slate-100 pb-16">
-            {/* WIDER Desktop Layout Container (max-w-7xl) */}
-            <div className="container mx-auto px-4 py-8 max-w-7xl">
+            {/* Fully Responsive & Fluid Dynamic Container: Expands to full width when sidebar is collapsed/closed */}
+            <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-6 transition-all duration-300">
                 
                 {/* Navigation & Action Bar */}
                 <div className="mb-6 flex items-center justify-between no-print">

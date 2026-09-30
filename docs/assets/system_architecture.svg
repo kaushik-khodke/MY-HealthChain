@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Card Gradients -->
+    <linearGradient id="clientCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="qmlCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="hmsCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="gatewayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Glow & Shadow Filters -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Arrow Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="purpleArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-size: 24px; font-weight: 800; fill: #f8fafc; letter-spacing: 0.5px; }
+    .subtitle { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: #94a3b8; }
+    .section-header { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: #38bdf8; text-transform: uppercase; letter-spacing: 1px; }
+    .card-title { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-size: 13px; font-weight: 700; fill: #ffffff; }
+    .card-desc { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-size: 11px; font-weight: 400; fill: #cbd5e1; }
+    .badge { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-size: 10px; font-weight: 700; }
+  </style>
+
+  <!-- Deep Slate Canvas -->
+  <rect width="1200" height="900" fill="url(#bgGrad)" rx="16"/>
+  <rect x="1" y="1" width="1198" height="898" fill="none" stroke="#334155" stroke-width="1.5" rx="16"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(40, 45)">
+    <text class="title" x="0" y="0">🏥 MyHealthChain (Stelix) — End-to-End System Architecture Blueprint</text>
+    <text class="subtitle" x="0" y="24">SIH 2026 (Problem Statement 26139: Egreen Quanta) | Enterprise Hybrid QML & Autonomous Emergency Healthcare</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 1: CLIENT PORTALS & TOUCHPOINTS                                     -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 100)">
+    <rect width="1120" height="135" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" rx="12" filter="url(#cardShadow)"/>
+    <text class="section-header" x="20" y="28">1. Client Layer & Omnichannel Touchpoints (React 18 / TypeScript / Vite)</text>
+
+    <!-- Patient Portal Card -->
+    <g transform="translate(20, 45)">
+      <rect width="170" height="75" fill="url(#clientCardGrad)" stroke="#38bdf8" stroke-width="1.2" rx="8"/>
+      <text class="card-title" x="12" y="22">🩸 Patient Portal</text>
+      <text class="card-desc" x="12" y="40">• QML Analysis & Telemetry</text>
+      <text class="card-desc" x="12" y="55">• Lab OCR & QR Health Card</text>
+      <text class="card-desc" x="12" y="68">• Decentralized IPFS Storage</text>
+    </g>
+
+    <!-- Doctor Portal Card -->
+    <g transform="translate(205, 45)">
+      <rect width="170" height="75" fill="url(#clientCardGrad)" stroke="#38bdf8" stroke-width="1.2" rx="8"/>
+      <text class="card-title" x="12" y="22">🥼 Doctor Portal</text>
+      <text class="card-desc" x="12" y="40">• Bedside QR & PIN Scan</text>
+      <text class="card-desc" x="12" y="55">• Dynamic ESI Urgency Queue</text>
+      <text class="card-desc" x="12" y="68">• Authoritative Override & CPOE</text>
+    </g>
+
+    <!-- Pharmacist Portal Card -->
+    <g transform="translate(390, 45)">
+      <rect width="170" height="75" fill="url(#clientCardGrad)" stroke="#38bdf8" stroke-width="1.2" rx="8"/>
+      <text class="card-title" x="12" y="22">💊 Pharmacist Portal</text>
+      <text class="card-desc" x="12" y="40">• Live Fulfillment Queue</text>
+      <text class="card-desc" x="12" y="55">• AI Drug Interaction Checker</text>
+      <text class="card-desc" x="12" y="68">• Automated Stripe Checkout</text>
+    </g>
+
+    <!-- Hospital Command Center Card -->
+    <g transform="translate(575, 45)">
+      <rect width="175" height="75" fill="url(#clientCardGrad)" stroke="#f43f5e" stroke-width="1.5" rx="8"/>
+      <text class="card-title" x="12" y="22" fill="#fda4af">🏥 Command Center</text>
+      <text class="card-desc" x="12" y="40">• ESI 1–5 Triage Live Monitor</text>
+      <text class="card-desc" x="12" y="55">• ICU/Ward Bed Matrix</text>
+      <text class="card-desc" x="12" y="68">• 4-Signal Surge Forecaster</text>
+    </g>
+
+    <!-- Physical Smart Health Card -->
+    <g transform="translate(765, 45)">
+      <rect width="165" height="75" fill="url(#clientCardGrad)" stroke="#10b981" stroke-width="1.2" rx="8"/>
+      <text class="card-title" x="12" y="22">💳 Smart Health Card</text>
+      <text class="card-desc" x="12" y="40">• Offline Physical QR Code</text>
+      <text class="card-desc" x="12" y="55">• 4-Digit PIN Authentication</text>
+      <text class="card-desc" x="12" y="68">• Emergency IPFS Decryption</text>
+    </g>
+
+    <!-- Omnichannel WhatsApp / Voice -->
+    <g transform="translate(945, 45)">
+      <rect width="155" height="75" fill="url(#clientCardGrad)" stroke="#a855f7" stroke-width="1.2" rx="8"/>
+      <text class="card-title" x="12" y="22">📱 Omnichannel AI</text>
+      <text class="card-desc" x="12" y="40">• Baileys WhatsApp Gateway</text>
+      <text class="card-desc" x="12" y="55">• PDF Health Reports</text>
+      <text class="card-desc" x="12" y="68">• Twilio + ElevenLabs Voice</text>
+    </g>
+  </g>
+
+  <!-- Connectors from Layer 1 to Layer 2 -->
+  <path d="M 600 235 L 600 270" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 2: API GATEWAY & CORE BACKEND                                      -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 275)">
+    <rect width="1120" height="95" fill="url(#gatewayGrad)" stroke="#0284c7" stroke-width="1.5" rx="12" filter="url(#cardShadow)"/>
+    <text class="section-header" x="20" y="26">2. API Gateway, Core Configuration & Security (FastAPI / Python 3.10+ / ASGI)</text>
+    
+    <!-- Router Badges -->
+    <g transform="translate(20, 42)">
+      <rect width="130" height="38" fill="#1e293b" stroke="#38bdf8" rx="6"/>
+      <text class="card-title" x="10" y="23">⚛️ /patient/qml-*</text>
+    </g>
+    <g transform="translate(160, 42)">
+      <rect width="125" height="38" fill="#1e293b" stroke="#f43f5e" rx="6"/>
+      <text class="card-title" x="10" y="23">🩺 /predict-triage</text>
+    </g>
+    <g transform="translate(295, 42)">
+      <rect width="115" height="38" fill="#1e293b" stroke="#10b981" rx="6"/>
+      <text class="card-title" x="10" y="23">🏥 /hms/core/*</text>
+    </g>
+    <g transform="translate(420, 42)">
+      <rect width="145" height="38" fill="#1e293b" stroke="#10b981" rx="6"/>
+      <text class="card-title" x="10" y="23">🔬 /hms/diagnostics</text>
+    </g>
+    <g transform="translate(575, 42)">
+      <rect width="135" height="38" fill="#1e293b" stroke="#10b981" rx="6"/>
+      <text class="card-title" x="10" y="23">🔪 /hms/surgical</text>
+    </g>
+    <g transform="translate(720, 42)">
+      <rect width="115" height="38" fill="#1e293b" stroke="#f59e0b" rx="6"/>
+      <text class="card-title" x="10" y="23">📈 /resource/*</text>
+    </g>
+    <g transform="translate(845, 42)">
+      <rect width="120" height="38" fill="#1e293b" stroke="#a855f7" rx="6"/>
+      <text class="card-title" x="10" y="23">🔄 /federation/*</text>
+    </g>
+    <g transform="translate(975, 42)">
+      <rect width="125" height="38" fill="#1e293b" stroke="#64748b" rx="6"/>
+      <text class="card-title" x="10" y="23">⚙️ core/logger.py</text>
+    </g>
+  </g>
+
+  <!-- Connectors from Layer 2 to Processing Pillars -->
+  <path d="M 320 370 L 320 410" stroke="#a855f7" stroke-width="2" marker-end="url(#purpleArrow)"/>
+  <path d="M 880 370 L 880 410" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 3: DUAL-PILLAR PROCESSING CORES                                     -->
+  <!-- ========================================================================= -->
+
+  <!-- LEFT PILLAR: 4-STAGE HYBRID QML CLINICAL PIPELINE (SIH 26139) -->
+  <g transform="translate(40, 415)">
+    <rect width="545" height="325" fill="url(#qmlCardGrad)" stroke="#a855f7" stroke-width="2" rx="12" filter="url(#cardShadow)"/>
+    <text class="section-header" x="20" y="28" fill="#c084fc">3A. 4-Stage Hybrid QML Clinical Engine (SIH 26139: Egreen Quanta)</text>
+
+    <!-- Stage 1 -->
+    <g transform="translate(20, 45)">
+      <rect width="505" height="52" fill="#0f172a" stroke="#818cf8" stroke-width="1.2" rx="6"/>
+      <text class="card-title" x="12" y="20">🌌 Stage 1: Egreen Quanta QBHO Biomarker Selection</text>
+      <text class="card-desc" x="12" y="38">• Quantum Black Hole Event Horizon absorbs collinear features • Optimal 6 Qubits selected</text>
+    </g>
+
+    <!-- Stage 2 -->
+    <g transform="translate(20, 107)">
+      <rect width="505" height="52" fill="#0f172a" stroke="#818cf8" stroke-width="1.2" rx="6"/>
+      <text class="card-title" x="12" y="20">📐 Stage 2: Classical Angle Mapping &amp; Barren Plateau Escape</text>
+      <text class="card-desc" x="12" y="38">• φ_i = 2·arctan(z_i) ∈ [-π, π] • QBHO Variational Angle Optimizer escapes plateaus 3.5× faster</text>
+    </g>
+
+    <!-- Stage 3 Dual Quantum Box -->
+    <g transform="translate(20, 169)">
+      <rect width="505" height="75" fill="#0f172a" stroke="#c084fc" stroke-width="1.5" rx="6"/>
+      <text class="card-title" x="12" y="20">⚛️ Stage 3: Dual Quantum Inference Engine</text>
+      
+      <!-- Sub-model A: VQC -->
+      <rect x="12" y="28" width="235" height="38" fill="#1e1b4b" rx="4"/>
+      <text class="card-title" x="20" y="44" fill="#a5b4fc">Model A: 6-Qubit VQC</text>
+      <text class="card-desc" x="20" y="58">36 params, CNOT loop, ⟨Z_0⟩ meas.</text>
+
+      <!-- Sub-model B: QSVM -->
+      <rect x="258" y="28" width="235" height="38" fill="#1e1b4b" rx="4"/>
+      <text class="card-title" x="266" y="44" fill="#a5b4fc">Model B: QSVM Kernel</text>
+      <text class="card-desc" x="266" y="58">64-dim Hilbert state fidelity kernel</text>
+    </g>
+
+    <!-- Stage 4 Stacking -->
+    <g transform="translate(20, 254)">
+      <rect width="505" height="55" fill="#1e1b4b" stroke="#34d399" stroke-width="1.5" rx="6"/>
+      <text class="card-title" x="12" y="20" fill="#6ee7b7">⚖️ Stage 4: Hybrid Stacking Meta-Learner (VQC + QSVM + XGBoost)</text>
+      <text class="card-desc" x="12" y="38" fill="#a7f3d0"><b>Sensitivity: 91.67%</b> (Recall) | <b>Latency: 5.2 ms</b> (&lt; 10ms SLA) | Explainability &amp; CDSS Safety Guard</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PILLAR: ENTERPRISE HMS CORE, EMERGENCY TRIAGE & FEDERATED LEARNING -->
+  <g transform="translate(615, 415)">
+    <rect width="545" height="325" fill="url(#hmsCardGrad)" stroke="#10b981" stroke-width="2" rx="12" filter="url(#cardShadow)"/>
+    <text class="section-header" x="20" y="28" fill="#34d399">3B. Emergency Clinical Operations, Enterprise HMS &amp; FL Network</text>
+
+    <!-- Emergency Triage Box -->
+    <g transform="translate(20, 45)">
+      <rect width="505" height="58" fill="#0f172a" stroke="#f43f5e" stroke-width="1.2" rx="6"/>
+      <text class="card-title" x="12" y="20" fill="#fda4af">🧠 Autonomous Emergency Triage &amp; Surge Forecaster</text>
+      <text class="card-desc" x="12" y="38">• Sub-5ms XGBoost ESI 1–5 Triage (RED, ORANGE, YELLOW, GREEN, BLUE)</text>
+      <text class="card-desc" x="12" y="50">• 4-Signal Volume Surge Forecaster (+1h/+4h) • Gemini 2.0 Strategic Command Ops</text>
+    </g>
+
+    <!-- Enterprise HMS Phases -->
+    <g transform="translate(20, 113)">
+      <rect width="505" height="98" fill="#0f172a" stroke="#10b981" stroke-width="1.2" rx="6"/>
+      <text class="card-title" x="12" y="20">🏥 Enterprise HMS / HIS Suite (Phases 1–6)</text>
+      <text class="card-desc" x="12" y="38">• Phase 1 &amp; 2: Levenshtein UHID Fuzzy Deduplication, OPD Tokens, Inpatient ADT</text>
+      <text class="card-desc" x="12" y="52">• Phase 3: Bedside 5-Rights eMAR Verification (Right Patient, Drug, Dose, Route, Time)</text>
+      <text class="card-desc" x="12" y="66">• Phase 4: LIS Specimen Delta Checks, RIS/PACS DICOM Viewer, RCM Inpatient Billing</text>
+      <text class="card-desc" x="12" y="80">• Phase 5 &amp; 6: WHO OT Safety Checklist, Blood Bank Reservation, HL7 FHIR v4.0, ABDM ABHA</text>
+    </g>
+
+    <!-- Federated Learning Core -->
+    <g transform="translate(20, 221)">
+      <rect width="505" height="88" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" rx="6"/>
+      <text class="card-title" x="12" y="20" fill="#7dd3fc">🔄 Collaborative Privacy-Preserving Retraining (FL Core)</text>
+      <text class="card-desc" x="12" y="38">• Zero Raw Scans Exfiltrated: Local training on CheXNet, CT-CLIP (3D ViT), CMR-AI</text>
+      <text class="card-desc" x="12" y="52">• DP-SGD Privacy Perturbation (C=1.0, ε ≤ 5.0) • FedBN Scanner Harmonization</text>
+      <text class="card-desc" x="12" y="66">• Byzantine Sentinel Defense (Multi-Krum + Cosine Screening) • Pinata IPFS CIDs</text>
+    </g>
+  </g>
+
+  <!-- Connectors from Pillars to Persistence -->
+  <path d="M 320 740 L 320 770" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 880 740 L 880 770" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========================================================================= -->
+  <!-- LAYER 4: PERSISTENCE & DECENTRALIZED STORAGE                              -->
+  <!-- ========================================================================= -->
+  <g transform="translate(40, 775)">
+    <rect width="1120" height="95" fill="#0f172a" stroke="#334155" stroke-width="1.5" rx="12" filter="url(#cardShadow)"/>
+    <text class="section-header" x="20" y="26">4. Persistence, Real-Time WebSockets &amp; Decentralized Storage</text>
+
+    <!-- Supabase Card -->
+    <g transform="translate(20, 40)">
+      <rect width="345" height="42" fill="#1e293b" stroke="#3ecf8e" rx="6"/>
+      <text class="card-title" x="12" y="20" fill="#6ee7b7">⚡ Supabase PostgreSQL 15 &amp; Realtime</text>
+      <text class="card-desc" x="12" y="34">Instant WebSocket streams, ESI queues, bed matrix, RLS policies</text>
+    </g>
+
+    <!-- Pinata IPFS Card -->
+    <g transform="translate(385, 40)">
+      <rect width="345" height="42" fill="#1e293b" stroke="#f43f5e" rx="6"/>
+      <text class="card-title" x="12" y="20" fill="#fda4af">🌐 Pinata IPFS Decentralized Network</text>
+      <text class="card-desc" x="12" y="34">Decentralized encrypted records, SHA-256 model provenance ledger</text>
+    </g>
+
+    <!-- External Integrations Card -->
+    <g transform="translate(750, 40)">
+      <rect width="350" height="42" fill="#1e293b" stroke="#eab308" rx="6"/>
+      <text class="card-title" x="12" y="20" fill="#fde047">💳 External Gateways &amp; National Standards</text>
+      <text class="card-desc" x="12" y="34">Stripe Checkout, Twilio/ElevenLabs, ABDM 14-Digit ABHA, HL7 FHIR v4.0</text>
+    </g>
+  </g>
+</svg>
